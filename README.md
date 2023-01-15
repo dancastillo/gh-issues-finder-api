@@ -6,7 +6,7 @@
 
 Tool to help find issues that you can contribute to
 
-Thanks to [@GlenTiki](https://github.com/GlenTiki) for the original at https://github.com/GlenTiki/gh-issue-finder
+Thanks to [@GlenTiki](https://github.com/GlenTiki) for the original at https://github.com/GlenTiki/gh-issue-finder and [fastify](https://github.com/fastify/gh-issues-finder)
 
 # Usage
 
