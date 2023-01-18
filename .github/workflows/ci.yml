@@ -16,7 +16,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - run: |
-          npm ci
+          npm i
           npm run lint
           npm test
 

@@ -3,7 +3,7 @@
 const tap = require('tap')
 const sinon = require('sinon')
 
-const { fetchIssues } = require('./fetchIssues')
+const { fetchIssues } = require('../fetchIssues')
 
 const mockIssue = {
   url: 'https://api.github.com/repos/fastify/help/issues/478',
@@ -87,7 +87,7 @@ const mockSearchIssuesAndPullRequests = {
   status: 200
 }
 
-tap.test('tests the "/api/find-issues" route', async t => {
+tap.test('tests the "/api/find-issues" route', { only: true }, async t => {
   const searchIssuesStub = sinon.stub()
 
   searchIssuesStub.onCall(0).returns({
@@ -107,8 +107,14 @@ tap.test('tests the "/api/find-issues" route', async t => {
     data: { ...mockIssuesData, items: [mockIssue2] }
   })
 
-  const build = t.mock('./app', {
-    './fetchIssues': {
+  const build = t.mock('../app', {
+    '@dancastillo/cache': {
+      get: () => {
+        return null
+      },
+      set: () => {}
+    },
+    '../fetchIssues': {
       fetchIssues,
       getGithubClient: () => {
         return {
@@ -184,4 +190,33 @@ tap.test('tests the "/api/find-issues" route', async t => {
   tap.equal(response2.statusCode, 200, 'returns a status code of 200')
   tap.equal(JSON.parse(response2.body).results[0].body, mockIssue.body)
   tap.equal(JSON.parse(response2.body).results[1].body, mockIssue.body)
+})
+
+tap.test('tests the "/api/find-issues" route with cache', async t => {
+  const build = t.mock('../app', {
+    '@dancastillo/cache': {
+      get: () => {
+        return []
+      },
+      set: () => {}
+    },
+    '../fetchIssues': {
+      fetchIssues,
+      getGithubClient: () => {
+        return {
+          search: { issuesAndPullRequests: () => undefined }
+        }
+      }
+    }
+  })
+  const app = build()
+
+  // test with defaults
+  const response = await app.inject({
+    method: 'GET',
+    url: '/api/find-issues?org=test&includeBody=true&labels=1&labels=2'
+  })
+
+  tap.equal(response.statusCode, 200, 'returns a status code of 200')
+  tap.equal(response.body, JSON.stringify({ results: [] }))
 })

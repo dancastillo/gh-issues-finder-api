@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "tap test.js",
+    "lint:fix": "eslint . --fix",
+    "test": "tap test/test.js",
     "prepare": "npx husky install",
-    "start": "node ."
+    "start": "node .",
+    "dev": "nodemon ."
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
+    "nodemon": "^2.0.20",
     "pino-pretty": "^9.1.1",
     "prettier": "^2.8.1",
     "sinon": "^15.0.1",
@@ -37,6 +40,7 @@
     "*.{js,jsx}": "eslint --cache --fix"
   },
   "dependencies": {
+    "@dancastillo/cache": "^0.0.3",
     "@fastify/cors": "^8.2.0",
     "@octokit/rest": "^19.0.5",
     "dotenv": "^16.0.3",
