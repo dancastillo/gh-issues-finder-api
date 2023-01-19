@@ -87,7 +87,7 @@ const mockSearchIssuesAndPullRequests = {
   status: 200
 }
 
-tap.test('tests the "/api/find-issues" route', { only: true }, async t => {
+tap.test('tests the "/api/find-issues" route', async t => {
   const searchIssuesStub = sinon.stub()
 
   searchIssuesStub.onCall(0).returns({
@@ -108,12 +108,12 @@ tap.test('tests the "/api/find-issues" route', { only: true }, async t => {
   })
 
   const build = t.mock('../app', {
-    '@dancastillo/cache': {
+    '@dancastillo/cache': () => ({
       get: () => {
         return null
       },
       set: () => {}
-    },
+    }),
     '../fetchIssues': {
       fetchIssues,
       getGithubClient: () => {
@@ -194,12 +194,12 @@ tap.test('tests the "/api/find-issues" route', { only: true }, async t => {
 
 tap.test('tests the "/api/find-issues" route with cache', async t => {
   const build = t.mock('../app', {
-    '@dancastillo/cache': {
+    '@dancastillo/cache': () => ({
       get: () => {
         return []
       },
       set: () => {}
-    },
+    }),
     '../fetchIssues': {
       fetchIssues,
       getGithubClient: () => {

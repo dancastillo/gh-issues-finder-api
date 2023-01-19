@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "tap test/test.js",
+    "test": "tap test/*.js",
     "prepare": "npx husky install",
     "start": "node .",
     "dev": "nodemon ."
