@@ -18,7 +18,10 @@ const fetchIssues = async (includeBody, labels, org, client, cache) => {
   const itemSearchResults = await Promise.all(
     labels.map(async label => {
       const issues = await client.search.issuesAndPullRequests({
-        q: `is:issue is:open sort:updated-desc label:"${label}" org:"${org}"`
+        q: `is:issue is:open label:"${label}" org:"${org}"`,
+        sort: 'updated',
+        order: 'desc',
+        per_page: 100
       })
       return issues.data.items
     })
