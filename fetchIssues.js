@@ -2,12 +2,6 @@
 
 const { Octokit } = require('@octokit/rest')
 
-let cache = {
-  org: '',
-  labels: [],
-  results: {}
-}
-
 /* istanbul ignore next */
 const getGithubClient = () => {
   /* istanbul ignore next */
@@ -16,14 +10,18 @@ const getGithubClient = () => {
   })
 }
 
-const fetchIssues = async (includeBody, labels, org, client) => {
-  if (cache.org === org && cache.labels.join('') === labels.join('')) {
-    return cache.results
+const fetchIssues = async (includeBody, labels, org, client, cache) => {
+  const data = cache.get(`${org}_${labels.join('_')}`)
+  if (data) {
+    return data
   }
   const itemSearchResults = await Promise.all(
     labels.map(async label => {
       const issues = await client.search.issuesAndPullRequests({
-        q: `is:issue is:open sort:updated-desc label:"${label}" org:"${org}"`
+        q: `is:issue is:open label:"${label}" org:"${org}"`,
+        sort: 'updated',
+        order: 'desc',
+        per_page: 100
       })
       return issues.data.items
     })
@@ -59,11 +57,7 @@ const fetchIssues = async (includeBody, labels, org, client) => {
       labels: item.labels.map(({ name }) => name)
     })
   }
-  cache = {
-    org,
-    labels,
-    results: Array.from(dedupeMap.values())
-  }
+  cache.set(`${org}_${labels.join('_')}`, Array.from(dedupeMap.values()))
   return Array.from(dedupeMap.values())
 }
 
