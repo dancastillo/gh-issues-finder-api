@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.0.3
     version: 0.0.3
   '@fastify/cors':
-    specifier: ^8.2.0
-    version: 8.2.0
+    specifier: ^8.4.0
+    version: 8.4.0
   '@octokit/rest':
     specifier: ^19.0.5
     version: 19.0.5
@@ -544,8 +544,8 @@ packages:
       fast-uri: 2.2.0
     dev: false
 
-  /@fastify/cors@8.2.0:
-    resolution: {integrity: sha512-qDgwpmg6C4D0D3nh8MTMuRXWyEwPnDZDBODaJv90FP2o9ukbahJByW4FtrM5Bpod5KbTf1oIExBmpItbUTQmHg==}
+  /@fastify/cors@8.4.0:
+    resolution: {integrity: sha512-MlVvMTenltToByTpLwlWtO+7dQ3l2J+1OpmGrx9JpSNWo1d+dhfNCOi23zHhxdFhtpDzfwGwCsKu9DTeG7k7nQ==}
     dependencies:
       fastify-plugin: 4.4.0
       mnemonist: 0.39.5
