@@ -21,7 +21,7 @@ const fetchIssues = async (includeBody, labels, org, client, cache) => {
         q: `is:issue is:open label:"${label}" org:"${org}"`,
         sort: 'updated',
         order: 'desc',
-        per_page: 100
+        per_page: 150
       })
       return issues.data.items
     })
