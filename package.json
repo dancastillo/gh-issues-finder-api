@@ -42,7 +42,7 @@
   "dependencies": {
     "@dancastillo/cache": "^1.1.0",
     "@fastify/cors": "^8.2.0",
-    "@octokit/rest": "^19.0.5",
+    "@octokit/rest": "^20.0.2",
     "dotenv": "^16.0.3",
     "fastify": "^4.24.3"
   }
