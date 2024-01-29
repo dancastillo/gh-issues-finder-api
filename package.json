@@ -44,6 +44,6 @@
     "@fastify/cors": "^9.0.0",
     "@octokit/rest": "^20.0.2",
     "dotenv": "^16.4.1",
-    "fastify": "^4.25.2"
+    "fastify": "^4.26.0"
   }
 }
