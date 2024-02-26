@@ -43,7 +43,7 @@
     "@dancastillo/cache": "^1.1.0",
     "@fastify/cors": "^9.0.1",
     "@octokit/rest": "^20.0.2",
-    "dotenv": "^16.4.4",
+    "dotenv": "^16.4.5",
     "fastify": "^4.26.1"
   }
 }
