@@ -10,6 +10,11 @@ jobs:
   test:
     name: Lint and test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [latest]
+        os: [ubuntu-latest]
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
