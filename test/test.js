@@ -107,7 +107,7 @@ tap.test('tests the "/api/find-issues" route', async t => {
     data: { ...mockIssuesData, items: [mockIssue2] }
   })
 
-  const build = t.mock('../app', {
+  const build = t.mockRequire('../app', {
     '@dancastillo/cache': () => ({
       get: () => {
         return null
@@ -193,7 +193,7 @@ tap.test('tests the "/api/find-issues" route', async t => {
 })
 
 tap.test('tests the "/api/find-issues" route with cache', async t => {
-  const build = t.mock('../app', {
+  const build = t.mockRequire('../app', {
     '@dancastillo/cache': () => ({
       get: () => {
         return []
