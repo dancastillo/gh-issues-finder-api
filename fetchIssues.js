@@ -1,12 +1,16 @@
 'use strict'
 
 const { Octokit } = require('@octokit/rest')
+const fetch = require('node-fetch')
 
 /* istanbul ignore next */
 const getGithubClient = () => {
   /* istanbul ignore next */
   return new Octokit({
-    auth: process.env.GH_AUTH_TOKEN
+    auth: process.env.GH_AUTH_TOKEN,
+    request: {
+      fetch
+    }
   })
 }
 

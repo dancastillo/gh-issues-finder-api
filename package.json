@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "tap test/*.js",
-    "prepare": "npx husky install",
+    "prepare": "husky",
     "start": "node .",
     "dev": "nodemon ."
   },
@@ -47,6 +47,7 @@
     "@fastify/cors": "^9.0.1",
     "@octokit/rest": "^20.1.1",
     "dotenv": "^16.4.5",
-    "fastify": "^4.28.0"
+    "fastify": "^4.28.0",
+    "node-fetch": "^2.7.0"
   }
 }

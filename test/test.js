@@ -220,3 +220,11 @@ tap.test('tests the "/api/find-issues" route with cache', async t => {
   tap.equal(response.statusCode, 200, 'returns a status code of 200')
   tap.equal(response.body, JSON.stringify({ results: [] }))
 })
+
+tap.test('get ocotokit - github client', t => {
+  const { getGithubClient } = require('../fetchIssues')
+
+  const client = getGithubClient()
+  tap.ok(client, 'client is returned')
+  t.end()
+})
