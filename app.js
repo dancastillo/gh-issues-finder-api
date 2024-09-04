@@ -1,7 +1,7 @@
 'use strict'
 
 const fastify = require('fastify')
-const cache = require('@dancastillo/cache')
+const Cache = require('@dancastillo/cache')
 
 const { fetchIssues, getGithubClient } = require('./fetchIssues')
 
@@ -47,7 +47,7 @@ function build(opts = {}) {
         labels,
         org,
         getGithubClient(),
-        cache()
+        Cache()
       )
 
       reply.send({ results: issues })

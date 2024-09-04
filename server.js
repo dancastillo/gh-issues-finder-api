@@ -8,4 +8,4 @@ const server = require('./app')({
   }
 })
 
-server.listen({ host: '127.0.0.1', port: process.env.PORT || 3001 })
+server.listen({ host: '127.0.0.1', port: process.env.PORT || 4011 })

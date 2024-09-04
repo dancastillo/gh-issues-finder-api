@@ -10,13 +10,18 @@ jobs:
   test:
     name: Lint and test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [latest]
+        os: [ubuntu-latest]
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
       - run: |
-          npm i
+          npm install
           npm run lint
           npm test
 

@@ -1,12 +1,16 @@
 'use strict'
 
 const { Octokit } = require('@octokit/rest')
+const fetch = require('node-fetch')
 
 /* istanbul ignore next */
 const getGithubClient = () => {
   /* istanbul ignore next */
   return new Octokit({
-    auth: process.env.GH_AUTH_TOKEN
+    auth: process.env.GH_AUTH_TOKEN,
+    request: {
+      fetch
+    }
   })
 }
 
@@ -21,7 +25,7 @@ const fetchIssues = async (includeBody, labels, org, client, cache) => {
         q: `is:issue is:open label:"${label}" org:"${org}"`,
         sort: 'updated',
         order: 'desc',
-        per_page: 100
+        per_page: 150
       })
       return issues.data.items
     })

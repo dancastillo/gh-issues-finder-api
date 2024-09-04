@@ -107,7 +107,7 @@ tap.test('tests the "/api/find-issues" route', async t => {
     data: { ...mockIssuesData, items: [mockIssue2] }
   })
 
-  const build = t.mock('../app', {
+  const build = t.mockRequire('../app', {
     '@dancastillo/cache': () => ({
       get: () => {
         return null
@@ -193,7 +193,7 @@ tap.test('tests the "/api/find-issues" route', async t => {
 })
 
 tap.test('tests the "/api/find-issues" route with cache', async t => {
-  const build = t.mock('../app', {
+  const build = t.mockRequire('../app', {
     '@dancastillo/cache': () => ({
       get: () => {
         return []
@@ -219,4 +219,12 @@ tap.test('tests the "/api/find-issues" route with cache', async t => {
 
   tap.equal(response.statusCode, 200, 'returns a status code of 200')
   tap.equal(response.body, JSON.stringify({ results: [] }))
+})
+
+tap.test('get ocotokit - github client', t => {
+  const { getGithubClient } = require('../fetchIssues')
+
+  const client = getGithubClient()
+  tap.ok(client, 'client is returned')
+  t.end()
 })
