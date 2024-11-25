@@ -43,7 +43,7 @@
     "*.{js,jsx}": "eslint --cache --fix"
   },
   "dependencies": {
-    "@dancastillo/cache": "^1.1.0",
+    "@dancastillo/cache": "^1.1.1",
     "@fastify/cors": "^9.0.1",
     "@octokit/rest": "^20.1.1",
     "dotenv": "^16.4.5",
