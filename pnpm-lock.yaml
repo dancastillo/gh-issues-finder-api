@@ -58,8 +58,8 @@ importers:
         specifier: ^2.8.1
         version: 2.8.8
       sinon:
-        specifier: ^20.0.0
-        version: 20.0.0
+        specifier: ^21.0.0
+        version: 21.0.0
       tap:
         specifier: ^21.1.0
         version: 21.1.0(@types/node@22.13.10)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
@@ -1991,8 +1991,8 @@ packages:
     resolution: {integrity: sha512-a2B9Y0KlNXl9u/vsW6sTIu9vGEpfKu2wRV6l1H3XEas/0gUIzGzBoP/IouTcUQbm9JWZLH3COxyn03TYlFax6w==}
     engines: {node: '>=10'}
 
-  sinon@20.0.0:
-    resolution: {integrity: sha512-+FXOAbdnj94AQIxH0w1v8gzNxkawVvNqE3jUzRLptR71Oykeu2RrQXXl/VQjKay+Qnh73fDt/oDfMo6xMeDQbQ==}
+  sinon@21.0.0:
+    resolution: {integrity: sha512-TOgRcwFPbfGtpqvZw+hyqJDvqfapr1qUlOizROIk4bBLjlsjlB00Pg6wMFXNtJRpu+eCZuVOaLatG7M8105kAw==}
 
   slice-ansi@5.0.0:
     resolution: {integrity: sha512-FC+lgizVPfie0kkhqUScwRu1O/lF6NOgJmlCgK+/LYxDCTk8sGelYaHDhFcDN+Sn3Cv+3VSa4Byeo+IMCzpMgQ==}
@@ -4446,7 +4446,7 @@ snapshots:
     dependencies:
       semver: 7.7.1
 
-  sinon@20.0.0:
+  sinon@21.0.0:
     dependencies:
       '@sinonjs/commons': 3.0.1
       '@sinonjs/fake-timers': 13.0.5
