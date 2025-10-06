@@ -37,7 +37,7 @@
     "pino-pretty": "^13.1.1",
     "prettier": "^2.8.1",
     "sinon": "^21.0.0",
-    "tap": "^21.1.0"
+    "tap": "^21.1.1"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix"
