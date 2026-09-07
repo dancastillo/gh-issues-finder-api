@@ -31,17 +31,17 @@ importers:
         specifier: ^21.1.0
         version: 21.1.0(@types/node@24.10.1)(conventional-commits-parser@6.4.0)(typescript@5.9.3)
       '@commitlint/config-conventional':
-        specifier: ^21.1.0
-        version: 21.1.0
+        specifier: ^21.2.2
+        version: 21.2.2
       eslint:
         specifier: ^8.57.0
-        version: 8.57.0
+        version: 8.57.0(supports-color@5.5.0)
       eslint-config-prettier:
         specifier: ^10.1.8
-        version: 10.1.8(eslint@8.57.0)
+        version: 10.1.8(eslint@8.57.0(supports-color@5.5.0))
       eslint-plugin-prettier:
         specifier: ^4.2.5
-        version: 4.2.5(eslint-config-prettier@10.1.8(eslint@8.57.0))(eslint@8.57.0)(prettier@2.8.8)
+        version: 4.2.5(eslint-config-prettier@10.1.8(eslint@8.57.0(supports-color@5.5.0)))(eslint@8.57.0(supports-color@5.5.0))(prettier@2.8.8)
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -62,7 +62,7 @@ importers:
         version: 22.0.0
       tap:
         specifier: ^21.7.4
-        version: 21.7.4(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)
+        version: 21.7.4(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(supports-color@5.5.0)(typescript@5.9.3)
 
 packages:
 
@@ -90,8 +90,8 @@ packages:
     engines: {node: '>=22.12.0'}
     hasBin: true
 
-  '@commitlint/config-conventional@21.1.0':
-    resolution: {integrity: sha512-BIFl8xM+3SLy3jrblUC3wmQLCVbLty+++6o859BDCmybVrQdXmIWO+dlkGIbv/M2bBoC55wGuh0zGiw3TPjL1g==}
+  '@commitlint/config-conventional@21.2.2':
+    resolution: {integrity: sha512-NxA37SZviusFUEYOQZ5hNnZ1h7O/KiemPkxjOlpzKJNnWxThiwc6/SaZhaPa8fyLvfRBAywhQhJJk8XESHWlpQ==}
     engines: {node: '>=22.12.0'}
 
   '@commitlint/config-validator@21.1.0':
@@ -154,6 +154,10 @@ packages:
     resolution: {integrity: sha512-YodnnnH1Cp+08nP8HGNJAIuB6L3/vdCTHVRTfF8Ik/wRCLOTsU9zwv3yO1cSPQRDa9CLYtE+UJ2K67r7CwMSFw==}
     engines: {node: '>=22.12.0'}
 
+  '@commitlint/types@21.2.0':
+    resolution: {integrity: sha512-7zVFCDB2reMvJH5dmbKnOQPjZEvjdJTH8jc0U/PIPU1r3/+vf5pD1HlfitV2MWsWXrvu7u39iY1lyLUPOaN0Gw==}
+    engines: {node: '>=22.12.0'}
+
   '@conventional-changelog/git-client@2.7.0':
     resolution: {integrity: sha512-j7A8/LBEQ+3rugMzPXoKYzyUPpw/0CBQCyvtTR7Lmu4olG4yRC/Tfkq79Mr3yuPs0SUitlO2HwGP3gitMJnRFw==}
     engines: {node: '>=18'}
@@ -165,6 +169,10 @@ packages:
         optional: true
       conventional-commits-parser:
         optional: true
+
+  '@conventional-changelog/template@1.4.0':
+    resolution: {integrity: sha512-aalGyl7dbB5PArRebDIX43ZvBlXrYm9uWzGJ26t+4SzJVPsOuvfILGGbw5X4yX7i50YEmJ8zvbiWnqH/AAnZqg==}
+    engines: {node: '>=22'}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -407,6 +415,10 @@ packages:
   '@simple-libs/stream-utils@1.2.0':
     resolution: {integrity: sha512-KxXvfapcixpz6rVEB6HPjOUZT22yN6v0vI0urQSk1L8MlEWPDFCZkhw2xmkyoTGYeFw7tWTZd7e3lVzRZRN/EA==}
     engines: {node: '>=18'}
+
+  '@simple-libs/stream-utils@2.0.0':
+    resolution: {integrity: sha512-fCTuZK4QBa+39Oz9l4OGfJfz+GpwCp3AqO7Zch3to99xHPgstVsRFpeQ8LNd2o1Gv8raL2mCFwiaHh7bFSp5DQ==}
+    engines: {node: '>=22'}
 
   '@sinonjs/commons@3.0.1':
     resolution: {integrity: sha512-K3mCHKQ9sVh8o1C9cxkwxaOmXoAMlDxC1mYyHrjqOWEcBjYr76t96zL2zlj5dUGZ3HSw240X1qgH3Mjf1yJWpQ==}
@@ -719,6 +731,10 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
+  argue-cli@3.2.0:
+    resolution: {integrity: sha512-VipTB0gXgGIFO2Rg9yEVN5wLt2AurJcZqDbgmYSwPwsykhLrQhs240/bfceev4w68lI8JshoOJIk9uW7tFzROw==}
+    engines: {node: '>=22'}
+
   array-ify@1.0.0:
     resolution: {integrity: sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==}
 
@@ -865,13 +881,18 @@ packages:
     resolution: {integrity: sha512-6gfI3otXK5Ph5DfCOI1dblr+kN3FAm5a97hYoQkqNZxOaYa5WKfXH+AnpsmS+iUH2mgVC2Cg2Qw9m5OKcmNrIg==}
     engines: {node: '>=18'}
 
-  conventional-changelog-conventionalcommits@9.3.1:
-    resolution: {integrity: sha512-dTYtpIacRpcZgrvBYvBfArMmK2xvIpv2TaxM0/ZI5CBtNUzvF2x0t15HsbRABWprS6UPmvj+PzHVjSx4qAVKyw==}
-    engines: {node: '>=18'}
+  conventional-changelog-conventionalcommits@10.4.0:
+    resolution: {integrity: sha512-Rriac6ZrAlVm6cy9Bz4NSp+WMHpwNXoPIYex+HjCgduAVUSbnew29DQjQw0C4g9u3HtSYzGiGY+pdBXAZo+4aA==}
+    engines: {node: '>=22'}
 
   conventional-commits-parser@6.4.0:
     resolution: {integrity: sha512-tvRg7FIBNlyPzjdG8wWRlPHQJJHI7DylhtRGeU9Lq+JuoPh5BKpPRX83ZdLrvXuOSu5Eo/e7SzOQhU4Hd2Miuw==}
     engines: {node: '>=18'}
+    hasBin: true
+
+  conventional-commits-parser@7.1.2:
+    resolution: {integrity: sha512-O+x4N2yH+ijvqWlIyTHsXTAP+algNWgGbjY2duCe8w2vUMvUB95cLRslCPfTMQyLAKlet3bhZTdu6ozn4M+QJQ==}
+    engines: {node: '>=22'}
     hasBin: true
 
   convert-source-map@2.0.0:
@@ -2344,7 +2365,7 @@ snapshots:
 
   '@commitlint/cli@21.1.0(@types/node@24.10.1)(conventional-commits-parser@6.4.0)(typescript@5.9.3)':
     dependencies:
-      '@commitlint/config-conventional': 21.1.0
+      '@commitlint/config-conventional': 21.2.2
       '@commitlint/format': 21.1.0
       '@commitlint/lint': 21.1.0
       '@commitlint/load': 21.1.0(@types/node@24.10.1)(typescript@5.9.3)
@@ -2358,19 +2379,19 @@ snapshots:
       - conventional-commits-parser
       - typescript
 
-  '@commitlint/config-conventional@21.1.0':
+  '@commitlint/config-conventional@21.2.2':
     dependencies:
-      '@commitlint/types': 21.1.0
-      conventional-changelog-conventionalcommits: 9.3.1
+      '@commitlint/types': 21.2.0
+      conventional-changelog-conventionalcommits: 10.4.0
 
   '@commitlint/config-validator@21.1.0':
     dependencies:
-      '@commitlint/types': 21.1.0
+      '@commitlint/types': 21.2.0
       ajv: 8.20.0
 
   '@commitlint/ensure@21.1.0':
     dependencies:
-      '@commitlint/types': 21.1.0
+      '@commitlint/types': 21.2.0
       es-toolkit: 1.49.0
 
   '@commitlint/execute-rule@21.0.1': {}
@@ -2382,7 +2403,7 @@ snapshots:
 
   '@commitlint/is-ignored@21.1.0':
     dependencies:
-      '@commitlint/types': 21.1.0
+      '@commitlint/types': 21.2.0
       semver: 7.8.5
 
   '@commitlint/lint@21.1.0':
@@ -2411,7 +2432,7 @@ snapshots:
 
   '@commitlint/parse@21.1.0':
     dependencies:
-      '@commitlint/types': 21.1.0
+      '@commitlint/types': 21.2.0
       conventional-changelog-angular: 8.3.1
       conventional-commits-parser: 6.4.0
 
@@ -2428,7 +2449,7 @@ snapshots:
   '@commitlint/resolve-extends@21.1.0':
     dependencies:
       '@commitlint/config-validator': 21.1.0
-      '@commitlint/types': 21.1.0
+      '@commitlint/types': 21.2.0
       es-toolkit: 1.49.0
       global-directory: 5.0.0
       resolve-from: 5.0.0
@@ -2438,7 +2459,7 @@ snapshots:
       '@commitlint/ensure': 21.1.0
       '@commitlint/message': 21.0.2
       '@commitlint/to-lines': 21.0.1
-      '@commitlint/types': 21.1.0
+      '@commitlint/types': 21.2.0
 
   '@commitlint/to-lines@21.0.1': {}
 
@@ -2451,6 +2472,11 @@ snapshots:
       conventional-commits-parser: 6.4.0
       picocolors: 1.1.1
 
+  '@commitlint/types@21.2.0':
+    dependencies:
+      conventional-commits-parser: 7.1.2
+      picocolors: 1.1.1
+
   '@conventional-changelog/git-client@2.7.0(conventional-commits-parser@6.4.0)':
     dependencies:
       '@simple-libs/child-process-utils': 1.0.2
@@ -2458,6 +2484,8 @@ snapshots:
       semver: 7.8.5
     optionalDependencies:
       conventional-commits-parser: 6.4.0
+
+  '@conventional-changelog/template@1.4.0': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2467,17 +2495,17 @@ snapshots:
     dependencies:
       ajv: 8.20.0
 
-  '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
+  '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0(supports-color@5.5.0))':
     dependencies:
-      eslint: 8.57.0
+      eslint: 8.57.0(supports-color@5.5.0)
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.11.0': {}
 
-  '@eslint/eslintrc@2.1.4':
+  '@eslint/eslintrc@2.1.4(supports-color@5.5.0)':
     dependencies:
       ajv: 6.15.0
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@5.5.0)
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.1
@@ -2513,10 +2541,10 @@ snapshots:
 
   '@gar/promise-retry@1.0.3': {}
 
-  '@humanwhocodes/config-array@0.11.14':
+  '@humanwhocodes/config-array@0.11.14(supports-color@5.5.0)':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@5.5.0)
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -2588,13 +2616,13 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@npmcli/agent@4.0.0':
+  '@npmcli/agent@4.0.0(supports-color@5.5.0)':
     dependencies:
       agent-base: 7.1.4
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      http-proxy-agent: 7.0.2(supports-color@5.5.0)
+      https-proxy-agent: 7.0.6(supports-color@5.5.0)
       lru-cache: 11.4.0
-      socks-proxy-agent: 8.0.5
+      socks-proxy-agent: 8.0.5(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2717,21 +2745,21 @@ snapshots:
 
   '@sigstore/protobuf-specs@0.5.1': {}
 
-  '@sigstore/sign@4.1.1':
+  '@sigstore/sign@4.1.1(supports-color@5.5.0)':
     dependencies:
       '@gar/promise-retry': 1.0.3
       '@sigstore/bundle': 4.0.0
       '@sigstore/core': 3.2.0
       '@sigstore/protobuf-specs': 0.5.1
-      make-fetch-happen: 15.0.5
+      make-fetch-happen: 15.0.5(supports-color@5.5.0)
       proc-log: 6.1.0
     transitivePeerDependencies:
       - supports-color
 
-  '@sigstore/tuf@4.0.2':
+  '@sigstore/tuf@4.0.2(supports-color@5.5.0)':
     dependencies:
       '@sigstore/protobuf-specs': 0.5.1
-      tuf-js: 4.1.0
+      tuf-js: 4.1.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2746,6 +2774,8 @@ snapshots:
       '@simple-libs/stream-utils': 1.2.0
 
   '@simple-libs/stream-utils@1.2.0': {}
+
+  '@simple-libs/stream-utils@2.0.0': {}
 
   '@sinonjs/commons@3.0.1':
     dependencies:
@@ -2893,7 +2923,7 @@ snapshots:
       - react-dom
       - utf-8-validate
 
-  '@tapjs/run@4.5.8(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@tapjs/run@4.5.8(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(supports-color@5.5.0)':
     dependencies:
       '@isaacs/which': 7.0.4
       '@tapjs/after': 3.3.10(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -2914,7 +2944,7 @@ snapshots:
       mkdirp: 3.0.1
       node-options-to-argv: 1.0.0
       opener: 1.5.2
-      pacote: 21.5.0
+      pacote: 21.5.0(supports-color@5.5.0)
       path-scurry: 2.0.2
       resolve-import: 2.4.0
       rimraf: 6.1.3
@@ -3130,6 +3160,8 @@ snapshots:
 
   argparse@2.0.1: {}
 
+  argue-cli@3.2.0: {}
+
   array-ify@1.0.0: {}
 
   async-hook-domain@4.0.1: {}
@@ -3288,14 +3320,19 @@ snapshots:
     dependencies:
       compare-func: 2.0.0
 
-  conventional-changelog-conventionalcommits@9.3.1:
+  conventional-changelog-conventionalcommits@10.4.0:
     dependencies:
-      compare-func: 2.0.0
+      '@conventional-changelog/template': 1.4.0
 
   conventional-commits-parser@6.4.0:
     dependencies:
       '@simple-libs/stream-utils': 1.2.0
       meow: 13.2.0
+
+  conventional-commits-parser@7.1.2:
+    dependencies:
+      '@simple-libs/stream-utils': 2.0.0
+      argue-cli: 3.2.0
 
   convert-source-map@2.0.0: {}
 
@@ -3327,9 +3364,11 @@ snapshots:
 
   dateformat@4.6.3: {}
 
-  debug@4.3.5:
+  debug@4.3.5(supports-color@5.5.0):
     dependencies:
       ms: 2.1.2
+    optionalDependencies:
+      supports-color: 5.5.0
 
   debug@4.4.3(supports-color@5.5.0):
     dependencies:
@@ -3388,17 +3427,17 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@10.1.8(eslint@8.57.0):
+  eslint-config-prettier@10.1.8(eslint@8.57.0(supports-color@5.5.0)):
     dependencies:
-      eslint: 8.57.0
+      eslint: 8.57.0(supports-color@5.5.0)
 
-  eslint-plugin-prettier@4.2.5(eslint-config-prettier@10.1.8(eslint@8.57.0))(eslint@8.57.0)(prettier@2.8.8):
+  eslint-plugin-prettier@4.2.5(eslint-config-prettier@10.1.8(eslint@8.57.0(supports-color@5.5.0)))(eslint@8.57.0(supports-color@5.5.0))(prettier@2.8.8):
     dependencies:
-      eslint: 8.57.0
+      eslint: 8.57.0(supports-color@5.5.0)
       prettier: 2.8.8
       prettier-linter-helpers: 1.0.0
     optionalDependencies:
-      eslint-config-prettier: 10.1.8(eslint@8.57.0)
+      eslint-config-prettier: 10.1.8(eslint@8.57.0(supports-color@5.5.0))
 
   eslint-scope@7.2.2:
     dependencies:
@@ -3407,20 +3446,20 @@ snapshots:
 
   eslint-visitor-keys@3.4.3: {}
 
-  eslint@8.57.0:
+  eslint@8.57.0(supports-color@5.5.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
+      '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0(supports-color@5.5.0))
       '@eslint-community/regexpp': 4.11.0
-      '@eslint/eslintrc': 2.1.4
+      '@eslint/eslintrc': 2.1.4(supports-color@5.5.0)
       '@eslint/js': 8.57.0
-      '@humanwhocodes/config-array': 0.11.14
+      '@humanwhocodes/config-array': 0.11.14(supports-color@5.5.0)
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
       '@ungap/structured-clone': 1.2.0
       ajv: 6.15.0
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@5.5.0)
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
       eslint-scope: 7.2.2
@@ -3666,14 +3705,14 @@ snapshots:
 
   http-cache-semantics@4.2.0: {}
 
-  http-proxy-agent@7.0.2:
+  http-proxy-agent@7.0.2(supports-color@5.5.0):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
-  https-proxy-agent@7.0.6:
+  https-proxy-agent@7.0.6(supports-color@5.5.0):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@5.5.0)
@@ -3919,10 +3958,10 @@ snapshots:
 
   make-error@1.3.6: {}
 
-  make-fetch-happen@15.0.5:
+  make-fetch-happen@15.0.5(supports-color@5.5.0):
     dependencies:
       '@gar/promise-retry': 1.0.3
-      '@npmcli/agent': 4.0.0
+      '@npmcli/agent': 4.0.0(supports-color@5.5.0)
       '@npmcli/redact': 4.0.0
       cacache: 20.0.4
       http-cache-semantics: 4.2.0
@@ -4077,11 +4116,11 @@ snapshots:
       npm-package-arg: 13.0.2
       semver: 7.8.5
 
-  npm-registry-fetch@19.1.1:
+  npm-registry-fetch@19.1.1(supports-color@5.5.0):
     dependencies:
       '@npmcli/redact': 4.0.0
       jsonparse: 1.3.1
-      make-fetch-happen: 15.0.5
+      make-fetch-happen: 15.0.5(supports-color@5.5.0)
       minipass: 7.1.3
       minipass-fetch: 5.0.2
       minizlib: 3.1.0
@@ -4129,7 +4168,7 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pacote@21.5.0:
+  pacote@21.5.0(supports-color@5.5.0):
     dependencies:
       '@gar/promise-retry': 1.0.3
       '@npmcli/git': 7.0.2
@@ -4143,9 +4182,9 @@ snapshots:
       npm-package-arg: 13.0.2
       npm-packlist: 10.0.4
       npm-pick-manifest: 11.0.3
-      npm-registry-fetch: 19.1.1
+      npm-registry-fetch: 19.1.1(supports-color@5.5.0)
       proc-log: 6.1.0
-      sigstore: 4.1.0
+      sigstore: 4.1.0(supports-color@5.5.0)
       ssri: 13.0.1
       tar: 7.5.15
     transitivePeerDependencies:
@@ -4398,13 +4437,13 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  sigstore@4.1.0:
+  sigstore@4.1.0(supports-color@5.5.0):
     dependencies:
       '@sigstore/bundle': 4.0.0
       '@sigstore/core': 3.2.0
       '@sigstore/protobuf-specs': 0.5.1
-      '@sigstore/sign': 4.1.1
-      '@sigstore/tuf': 4.0.2
+      '@sigstore/sign': 4.1.1(supports-color@5.5.0)
+      '@sigstore/tuf': 4.0.2(supports-color@5.5.0)
       '@sigstore/verify': 3.1.0
     transitivePeerDependencies:
       - supports-color
@@ -4437,7 +4476,7 @@ snapshots:
 
   smart-buffer@4.2.0: {}
 
-  socks-proxy-agent@8.0.5:
+  socks-proxy-agent@8.0.5(supports-color@5.5.0):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@5.5.0)
@@ -4543,7 +4582,7 @@ snapshots:
       yaml: 2.9.0
       yaml-types: 0.4.0(yaml@2.9.0)
 
-  tap@21.7.4(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3):
+  tap@21.7.4(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(supports-color@5.5.0)(typescript@5.9.3):
     dependencies:
       '@tapjs/after': 3.3.10(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@tapjs/after-each': 4.3.10(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -4557,7 +4596,7 @@ snapshots:
       '@tapjs/intercept': 4.3.10(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@tapjs/mock': 4.4.8(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@tapjs/node-serialize': 4.3.10(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@tapjs/run': 4.5.8(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@tapjs/run': 4.5.8(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(supports-color@5.5.0)
       '@tapjs/snapshot': 4.3.10(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tapjs/spawn': 4.3.10(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@tapjs/stdin': 4.3.10(@tapjs/core@4.5.8(@types/node@24.10.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -4642,11 +4681,11 @@ snapshots:
       typescript: 5.9.3
       walk-up-path: 4.0.0
 
-  tuf-js@4.1.0:
+  tuf-js@4.1.0(supports-color@5.5.0):
     dependencies:
       '@tufjs/models': 4.1.0
       debug: 4.4.3(supports-color@5.5.0)
-      make-fetch-happen: 15.0.5
+      make-fetch-happen: 15.0.5(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
